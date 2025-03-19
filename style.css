@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  background-color: #170a8b;
+  padding: 10px;
+  height: 100vh;
+  gap: 10px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "section1 sobremim"
+    "section2 postagem"
+    "contato redesociais"
+    "footer footer";
+}
+
+.container > div {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid black;
+}
+
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: nav;
+}
+
+.item3 {
+  grid-area: section1;
+}
+
+.item4 {
+  grid-area: section2;
+}
+
+.item5 {
+  grid-area: contato;
+}
+
+.item6 {
+  grid-area: sobremim;
+}
+
+.item7 {
+  grid-area: postagem;
+}
+
+.item8 {
+  grid-area: redesociais;
+}
+
+.item9 {
+  grid-area: footer;
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-areas:
+      "header "
+      "nav"
+      "section1"
+      "section2"
+      "contato"
+      "sobremim"
+      "postagem"
+      "redesociais"
+      "footer"
+      
+      ;
+
+    grid-template-columns: auto;
+
+  }
+}
